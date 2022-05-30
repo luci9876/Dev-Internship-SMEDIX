@@ -1,0 +1,112 @@
+.candidate-card{
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: 72px;
+    margin-right:136px;
+    margin-bottom: 21px;
+    height: 66px;
+    left: 0px;
+    top: 0px;
+    background: #FBFBFB;
+    border: 1px solid #A8A7A7;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    justify-content: left;
+    align-items: center;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.candidate-card > *:hover{
+    cursor: pointer;
+}
+
+.candidate-card :hover{
+    cursor: pointer;
+}
+
+.ellipse{
+    text-align: center;    
+    min-width: 40px;
+    height: 40px;
+    margin-left: 25px;    
+    background: #FFFFFF; 
+    align-items: center;
+    border: 1px solid #3655B3;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+.ellipse img{   
+    display: inline-block;
+    margin-top: 5px;
+}
+.name{
+    margin-left: 30px;
+    text-align: left;   
+    font-size: 20px;
+    height: 66px;
+    line-height: 66px;
+    color: #5E5E5E;
+    width: 442px;
+    left: 90px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.drop-down{
+    text-align: left;
+    resize: none;
+    width: 325px;
+    height: 35px;
+    top: 17px;
+    background: #FFFFFF;
+    border: 0.05px solid #5E5E5E;
+    box-sizing: border-box;
+    border-radius: 6px;
+    margin-right: 43px;
+}
+.status{
+    width: 442px;
+    left: 534px;
+}
+.role{
+    padding-top: 6px;
+    padding-left: 15px;
+    width: 442px;
+    left: 902px;
+}
+.technology{
+    padding-top: 6px;
+    padding-left: 15px;
+    width: 442px;
+    left: 1270px;
+}
+.date{
+    margin-right: 10px;
+    text-align: left;
+    width: 137px;
+    left: 1638px;
+}
+.delete{
+    display: inline-block;
+    cursor: pointer;
+    left: 20.83%;
+    right: 20.83%;
+}
+.generic{
+    padding-top: 6px;
+    padding-left: 15px;
+    height: inherit;
+    top: inherit;
+    box-sizing: inherit;
+    border-radius: inherit;
+}
+.white {
+    ::ng-deep .mat-select-value{
+        color: white!important;
+    }
+    ::ng-deep .mat-select-arrow{
+        color: white!important;
+    }
+}

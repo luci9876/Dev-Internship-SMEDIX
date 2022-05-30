@@ -1,0 +1,65 @@
+<div class="workflow-card">
+    <div class="row" [formGroup]="workflowCardGroup">
+        <mat-form-field class="column large" appearance="outline">
+            <mat-label>Step</mat-label>
+            <mat-select formControlName="step">
+                <mat-option #matStep (click)="validateSaveOnStep(matStep.value)" *ngFor="let step of stepList"
+                    [value]="step.name">
+                    {{step.name}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="column large" appearance="outline">
+            <mat-label>Status</mat-label>
+            <mat-select formControlName="status">
+                <mat-option #matStatus (click)="validateSaveOnStatus()"
+                    *ngFor="let status of statusDict.get(workflowCardGroup.get('step')!.value!)" [value]="status.name">
+                    {{status.name}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="column small">
+            <mat-label>Entry date</mat-label>
+            <input formControlName="entryDate" matInput [readonly]=true>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="column small">
+            <mat-label>Entry time</mat-label>
+            <input formControlName="entryTime" matInput [readonly]=true>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="column small">
+            <mat-label>User name</mat-label>
+            <input type="text" formControlName="userName" matInput [readonly]=true>
+        </mat-form-field>
+
+        <div class="icon" (click)="deleteClicked()">
+            <i class="fa-solid fa-trash"></i>
+        </div>
+    </div>
+    <br>
+
+    <div *ngIf="interviewSteps.includes(getStageByName(workflowCardGroup.get('step')?.value))" class="row"
+        [formGroup]="workflowCardGroup">
+        <mat-form-field appearance="outline" class="column large">
+            <mat-label>Interview date</mat-label>
+            <input type="date" formControlName="interviewDate" matInput>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="column large">
+            <mat-label>Interviewer</mat-label>
+            <input type="text" formControlName="interviewer" matInput>
+        </mat-form-field>
+    </div>
+
+    <div class="row" [formGroup]="workflowCardGroup">
+        <div class="container">
+            <mat-form-field appearance="outline">
+                <mat-label>Notes</mat-label>
+                <textarea cols="210" matInput formControlName="notes"></textarea>
+            </mat-form-field>
+        </div>
+    </div>
+</div>

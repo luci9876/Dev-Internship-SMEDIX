@@ -1,0 +1,172 @@
+
+
+.cancel-button {
+    background: #FFFFFF;
+    border: 1px solid #3655B3;
+    box-sizing: border-box;
+    border-radius: 6px;
+    color: #3655B3;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 9px;
+    padding-bottom: 10px;
+    margin-right: 23px;
+}
+
+.save-button {
+    background: #3655B3;
+    border: 1px solid #3655B3;
+    border-radius: 6px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    color: #FFFFFF;
+    padding-left: 31px;
+    padding-right: 31px;
+    padding-top: 9px;
+    padding-bottom: 10px;
+}
+
+
+.container {
+    display: flex;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 23px;
+    padding-left: 48px;
+}
+
+.file-btn {
+    height: 41px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 23px;
+    color: #5E5E5E;
+}
+
+.file-btn:hover {
+    //removed the other properties since they are duplicates
+    cursor: pointer;
+}
+
+.import {
+    background: url(../../../assets//import.svg);
+    height: 30px;
+    width: 30px;
+    border: none;
+    display: block;
+    margin-right: 80px;
+    margin-top: 18px;
+}
+
+.import:hover {
+    background: url(../../../assets/importHover.svg);
+    height: 30px;
+    width: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.topButtons {
+    text-align: right;
+    display: block;
+    margin-left: auto;
+}
+
+.cancel-button:hover{
+    cursor: pointer;
+}
+
+.save-button:hover{
+    cursor: pointer;
+}
+
+.row{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+@media only screen and (max-width: 820px){
+    .contact-info {
+        width: 40%;
+        display: block;
+        box-sizing: border-box;
+        min-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .tech-info {
+        width: 40%;
+        margin-right: auto;
+        
+        margin-left: auto;
+        display: block;
+        box-sizing: border-box;
+        min-width: 400px;
+    }
+}
+
+.contact-info {
+    width: 40%;
+    display: block;
+    box-sizing: border-box;
+    min-width: 400px;
+    margin-left: auto;
+}
+
+.tech-info {
+    width: 40%;
+    margin-right: auto;
+    
+    display: block;
+    box-sizing: border-box;
+    min-width: 400px;
+}
+
+.notes {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.details-container {
+    display: flex;
+    width: 100%;
+    padding: 0px;
+    margin-top: 110px;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.buttons-row{
+    width: 80%;
+    display: flex;
+    margin-right: auto;
+    
+    margin-left: auto;
+}
+
+
+.buttons {
+    display: flex;
+    margin-left: auto;
+    padding-bottom: 21px;
+    padding: 70px 0;
+}

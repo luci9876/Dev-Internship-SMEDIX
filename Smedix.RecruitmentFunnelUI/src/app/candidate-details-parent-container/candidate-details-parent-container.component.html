@@ -1,0 +1,25 @@
+<div class="back-button" (click)="backToFirstPage()">
+    Back
+</div>
+
+<a (click)="backToFirstPage()" class="arrow left"></a>
+
+<div>
+    <div class="candidate-details" (click)="candidatedetails()"
+        [ngClass]="hasRoute('history') ? 'not-current-page' : 'current-page'">
+        Candidate Details
+    </div>
+    <app-candidate-details *ngIf="!hasRoute('history')" (saveCandidate)="saveCandidate($event)"
+        [candidateLoad]="loadCandidate()"></app-candidate-details>
+</div>
+
+<div>
+    <div class="candidate-history" (click)="candidatehistory()"
+        [ngClass]="!hasRoute('history') ? 'not-current-page' : 'current-page'">
+        Candidate History
+    </div>
+    <app-candidate-history *ngIf="hasRoute('history')"></app-candidate-history>
+</div>
+
+<div class="first-line"></div>
+<div class="second-line" [ngClass]="!hasRoute('history') ? 'details-line' : 'history-line'"></div>

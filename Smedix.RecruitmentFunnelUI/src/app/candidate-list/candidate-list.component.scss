@@ -1,0 +1,134 @@
+#search{  
+    margin-left: 72px;
+    width: 80%;
+    border: none;
+    border-bottom: 2px solid rgba(240, 232, 229, 0.856);
+    padding-left: 25px;
+    background: url(../../assets//searchIcon.svg) no-repeat left;
+    background-size: 20px;
+    height: 50px;
+    font-size: large;
+    outline: none;
+}
+
+.candidateCard{
+    margin:2%;
+    text-align: center;
+    font-size: large;
+}
+
+.labels{
+    margin-top:2%;
+    margin-bottom: 2%;
+    font-size: large;
+    display: flex;
+    width: 1800x;
+}
+.name{
+    margin-left: 170px;
+    width: 442px;
+    left: 90px;
+    cursor:pointer;
+}
+.status{
+    margin-left: 228px;
+    width: 442px;
+    left: 534px;
+    text-align: center;
+
+}
+.role{
+    margin-left: 132px;
+    width: 442px;
+    left: 902px;
+    text-align: right;
+}
+.technology{
+    margin-left: 240px;
+    width: 442px;
+    left: 1270px;
+    text-align: right;
+}
+.last-update{
+    margin-left: 180px;
+    margin-right: 170px;
+    width: 442px;
+    left: 1638px;
+    text-align: center;
+    cursor:pointer;
+}
+.cardLabel{ 
+    font-size: large;
+}
+
+.list{
+    margin:3%;
+    border-style: double;
+    border-radius: 10px;
+    width:80%;
+    height:30px;
+    font-size: large;   
+}
+
+.add{
+    background: url(../../assets//addPlus.svg);
+    height: 60px;
+    width: 102px;
+    border: none; 
+    margin: 1%;
+}
+
+.add:hover{
+    background: url(../../assets//addPlusHover.svg);
+    height: 60px;
+    width: 102px;
+    border: none; 
+    margin: 1%;
+}
+
+.import{
+    background: url(../../assets/import.svg);
+    height: 30px;
+    width: 30px;
+    border: none;
+    margin: 1%;  
+}
+
+.import:hover{
+    background: url(../../assets/importHover.svg);
+    height: 30px;
+    width: 30px;
+    border: none;
+    margin: 1%;  
+}
+
+.export{
+    background: url(../../assets/export.svg);
+    height: 30px;
+    width: 30px;
+    border: none;
+    margin: 1%;
+}
+
+.export:hover{
+    background: url(../../assets/exportHover.svg);
+    height: 30px;
+    width: 30px;
+    border: none;
+    margin: 1%;
+}
+
+.topButtons{
+    text-align: right;
+}
+
+.topButtons button:hover {
+    cursor: pointer;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+<br>
+<br>
+<br>
+<br>
+<div class="topButtons">
+    <button (click)="import()" class="import">
+    </button>
+    <button (click)="export()" class="export">
+    </button>
+    <button (click)="fileInput.click()" class="add">
+        <input style="display: none" type="file"
+            accept=".pdf, .doc, .docx, .docm, .dotm, .dotx, .odt, .rtf, .txt, .xml, .htm', .html'"
+            (change)="onFileChanged($event)" #fileInput>
+    </button>
+</div>
+
+<div>
+    <input placeholder="  Search..." #search id="search" type="input" (keydown.enter)="onKey($event)">
+</div>
+
+<div class="labels">
+    <label class="cardLabel name" (click)="nameSort()">
+        <mat-icon [ngStyle]="{'color':  isNameCriteria ? 'red' : 'grey'}" >{{nameCriteria}}</mat-icon>
+        Name
+    </label>
+    <label class="cardLabel status">
+        Candidate Status
+    </label>
+    <label class="cardLabel role">
+        Role
+    </label>
+    <label class="cardLabel technology">
+        Technology
+    </label>
+    <label  class="cardLabel last-update" (click)="dateSort()">
+        <mat-icon [ngStyle]="{'color':  !isNameCriteria ? 'red' : 'grey'}" >{{dateCriteria}}</mat-icon>
+        Last Updated
+    </label>
+
+</div>
+
+<div class="candidate-card" *ngIf="candidatesPaged">
+    <div *ngFor="let candidate of candidatesPaged.items">
+        <app-candidate-card [statusList]="statusList" [roleList]="roleList" [technologyList]="technologyList"
+            [candidate]="candidate" (deletedCandidate)="getDeletedCandidate($event)"></app-candidate-card>
+    </div>
+</div>
+
+<mat-paginator *ngIf="candidatesPaged" [length]="candidatesPaged.totalCount" [pageSize]="candidatesPaged.pageSize"
+    [pageSizeOptions]="[20, 30, 50]" (page)="pageChanged($event)">
+</mat-paginator>

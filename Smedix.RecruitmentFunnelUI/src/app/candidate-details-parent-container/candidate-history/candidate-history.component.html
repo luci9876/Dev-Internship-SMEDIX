@@ -1,0 +1,38 @@
+
+
+<div class="main-cointainer">
+    <div class="row">
+            <mat-form-field class="column filter-select" appearance="outline">
+                <mat-label>Filter By</mat-label>
+                <mat-select (selectionChange)="onKey($event)" multiple>
+                    <mat-option *ngFor="let step of stepList" [value]="step">
+                        {{step.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+    </div>
+            <div *ngIf="!filter" class="row scrollable-panel" [ngClass]="{'shadow': candidateHistories.length>2}">
+                <div *ngIf="candidateHistories.length > 0 && stageAndStatuses.length > 0"> 
+                    <div *ngFor="let history of candidateHistories">
+                        <app-workflow-card (onChanges)="this.onCardChanges()"  (cardEvent)="validateSave($event)"  (onChanges)="this.onCardChanges()" [stagesAndStatusesDto]="stageAndStatuses" [events]="eventsSubject.asObservable()"
+                            [history]="history"></app-workflow-card>
+                    </div>
+                </div>
+                
+        <mat-icon-button ngClass="plusButton" (click)="createHistory()"></mat-icon-button>
+            </div>
+        <div *ngIf="filter" class="scrollable-panel row"  [ngClass]="{'shadow': candidateFilteredHistories.length>2}">
+                <div *ngFor="let history of candidateFilteredHistories">
+                    <app-workflow-card (onChanges)="this.onCardChanges()"  (cardEvent)="validateSave($event)" (onChanges)="this.onCardChanges()" [stagesAndStatusesDto]="stageAndStatuses" [events]="eventsSubject.asObservable()"
+                        [history]="history"></app-workflow-card>
+                </div>
+            <mat-icon-button ngClass="plusButton" (click)="createHistory()"></mat-icon-button>
+        </div>
+    
+    <div *ngIf="candidateHistories.length > 0" class="buttons row">
+            <div class="right-buttons">
+                <button class="cancel-button" (click)="cancel()">Cancel</button>
+                <button mat-raised-button  class="save-button" color="primary" [disabled]="isDisabled" (click)="save()">Save</button>    
+            </div>
+         </div>
+</div>

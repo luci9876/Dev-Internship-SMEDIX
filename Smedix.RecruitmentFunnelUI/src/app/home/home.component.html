@@ -1,0 +1,6 @@
+<p>home works!</p>
+<div>
+    <li *ngFor="let item of dictionary | keyvalue">{{item.value}} 
+        <button routerLink='/candidate-info/{{item.key}}'></button>
+    </li>  
+</div>

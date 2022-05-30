@@ -1,0 +1,176 @@
+.filter-select {
+    margin-left: auto;
+    margin-right: 10px;
+    width: fit-content;
+    margin-right: 84px;
+}
+
+.main-cointainer {
+    display: flex;
+    margin-top: 140px;
+    margin-left: 72px;
+    margin-right: 72px;
+    padding: 0;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    height: 850px;
+}
+
+.row{
+    width: 100%;
+}
+
+.column {
+    width: 410px;
+    border: 1px solid #9E9E9E;
+    box-sizing: border-box;
+    border-radius: 6px;
+    height: 50px;
+    display: block;
+}
+
+.plusButton {
+    background: url('../../../assets/plusButton.png');
+    background-size: 80px;
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    display: block;
+    cursor: pointer;
+}
+
+.historyCards {
+}
+
+.cancel-button {
+    background: #FFFFFF;
+    border: 1px solid #3655B3;
+    box-sizing: border-box;
+    border-radius: 6px;
+    color: #3655B3;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    height: 48px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 9px;
+    padding-bottom: 10px;
+}
+
+.save-button {
+    margin-left: 28px;
+    background: #3655B3;
+    border: 1px solid #3655B3;
+    border-radius: 6px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    color: #FFFFFF;
+    height: 48px;
+    padding-left: 31px;
+    padding-right: 31px;
+    padding-top: 9px;
+    padding-bottom: 10px;
+}
+
+.right-buttons {
+    margin-left: auto;
+    margin-right: 12px;
+    display: flex;
+    margin-top: 24px;
+}
+
+.buttons {
+    height: 10%;
+    display: flex;
+}
+
+.cards-container {
+    display: flex;
+    height: 50%;
+}
+
+.file-btn {
+    width: auto;
+    height: 41px;
+    left: 118px;
+    margin-right: 10px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 23px;
+    color: #5E5E5E;
+}
+
+.file-btn:hover {
+    //removed the other properties since they are duplicates
+    cursor: pointer;
+}
+
+.import {
+    background: url(../../../assets//import.svg);
+    height: 30px;
+    width: 30px;
+    left: 40px;
+    top: 99px;
+    border: none;
+    margin: 1%;
+}
+
+.import:hover {
+    background: url(../../../assets/importHover.svg);
+    height: 30px;
+    width: 30px;
+    bottom: 200px;
+    left: 40px;
+    top: 99px;
+    border: none;
+    margin: 1%;
+    cursor: pointer;
+}
+
+
+.cancel-button:hover {
+    cursor: pointer;
+}
+
+.save-button:hover {
+    cursor: pointer;
+}
+
+.scrollable-panel {
+    padding-top: 24px;
+    overflow-y: scroll;
+    height:80%;
+}
+
+
+.shadow {
+    border-bottom: 4px solid #F0F0F0;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+  
+  ::-webkit-scrollbar-track {
+    background: white;
+}
+  
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+}
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

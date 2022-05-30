@@ -1,0 +1,42 @@
+<div class="candidate-card" *ngIf="candidate" routerLink="candidate-details/{{candidate.id}}">
+    
+    <div class="ellipse">
+        <img src="./assets/icon.png">
+    </div>
+
+    <div class="name">{{candidate.name}}</div>
+
+    <div class="drop-down status" [formGroup]="candidateControl" (click)="$event.stopPropagation()">
+        <mat-select formControlName="status" [ngClass]="candidateControl.get('status')!.value ? 'generic white' : 'generic'" 
+            [ngStyle]="{'background-color': this.candidate.lastStatus!.colorHex ? this.candidate.lastStatus!.colorHex : candidateControl.get('status')?.value.colorHex}"
+            [(ngModel)]="this.candidate!.lastStatus!.id"
+            (selectionChange)="update()">
+            <mat-option *ngFor="let status of statusList" [value]="status!.id">
+                {{status.name}}
+            </mat-option>
+        </mat-select>
+    </div>
+
+    <div class="drop-down role" [formGroup]="candidateControl" (click)="$event.stopPropagation()">
+        <mat-select formControlName="role" [(ngModel)]="this.candidate.role!.id" (selectionChange)="update()">
+            <mat-option *ngFor="let role of roleList" [value]="role.id">
+                {{role.name}}
+            </mat-option>
+        </mat-select>
+    </div>
+
+    <div class="drop-down technology" [formGroup]="candidateControl" (click)="$event.stopPropagation()">
+        <mat-select formControlName="technology" [(ngModel)]="this.candidate.technology!.id" (selectionChange)="update()">
+            <mat-option *ngFor="let technology of technologyList" [value]="technology.id">
+                {{technology.name}}
+            </mat-option>
+        </mat-select>
+    </div>
+    <div class="date">
+        {{candidate.lastUpdated | date: 'dd'}}/{{candidate.lastUpdated | date:'MM'}}/{{candidate.lastUpdated | date: 'yyyy'}}
+    </div>
+
+    <mat-icon-button ngClass="delete" (click)="$event.stopPropagation()">
+        <img src="./assets/delete.png" (click)="delete()">
+    </mat-icon-button>
+</div>

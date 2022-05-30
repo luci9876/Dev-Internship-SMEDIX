@@ -1,0 +1,49 @@
+
+<div class="tech-info">
+    <h3 class="text">Technical Information</h3>
+    <div class="container">
+        <form class="content" [formGroup]="technicalInformationForm">
+
+        <div class="first-row">
+
+            <mat-form-field appearance="outline" class="column column-margin">
+                <mat-label>Candidate Status</mat-label>
+                <mat-select formControlName="status">
+                    <mat-option *ngFor="let status of statusList" [value]="status.name">
+                    {{status.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="column">
+                <mat-label>Role</mat-label>
+                <mat-select formControlName="role">
+                    <mat-option *ngFor="let role of roleList" [value]="role.name">
+                        {{role.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field appearance="outline" class="column tech">
+                <mat-label>Technology</mat-label>
+                <mat-select formControlName="technology">
+                    <mat-option *ngFor="let tech of technologyList" [value]="tech.name">
+                        {{tech.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field appearance="outline" class="column">
+                <mat-label>Years experience</mat-label>
+                <input matInput formControlName="yearsExperience">
+            </mat-form-field>
+        </div>
+
+        
+
+        </form>
+    </div>
+    
+</div>

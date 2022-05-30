@@ -1,0 +1,58 @@
+
+<div class="contact-info">
+    <h3 class="text row">Contact Information</h3>
+    <div class="container">
+        <form [formGroup]="contactInformationForm" class="info-form">
+    
+            <div class="row">
+                <mat-form-field appearance="outline" class="mid-field">
+                    <mat-label>Name</mat-label>
+                    <input matInput id="name" formControlName="name">
+                </mat-form-field>
+    
+                <mat-form-field appearance="outline" class="small-field">
+                    <mat-label>Current Company</mat-label>
+                    <input matInput formControlName="company">
+                </mat-form-field>
+            </div>
+    
+            <div class="row">
+                <mat-form-field appearance="outline" class="mid-field">
+                    <mat-label>Email address</mat-label>
+                    <input matInput formControlName="email">
+                </mat-form-field>
+    
+                <mat-form-field appearance="outline" class="small-field">
+                    <mat-label>Phone number</mat-label>
+                    <input matInput formControlName="phone">
+                </mat-form-field>
+            </div>
+    
+            <div class="row">
+                <mat-form-field appearance="outline" class="big-field">
+                    <mat-label>Address</mat-label>
+                    <input matInput formControlName="address">
+                </mat-form-field>
+            </div>
+    
+            <div class="row">
+                <mat-form-field appearance="outline" class="mid-field">
+                    <mat-label>Referred by</mat-label>
+                    <input matInput formControlName="referredBy">
+                </mat-form-field>
+    
+                <mat-form-field appearance="outline" class="small-field">
+                    <mat-label>Source</mat-label>
+                    <input matInput formControlName="source">
+                </mat-form-field>
+            </div>
+    
+            <div class="row">
+                <mat-form-field appearance="outline" class="big-field">
+                    <mat-label>LinkedIN</mat-label>
+                    <input matInput formControlName="linkedIn">
+                </mat-form-field>
+            </div>
+        </form>
+    </div>
+</div>

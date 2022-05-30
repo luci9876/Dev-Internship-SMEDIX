@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="topButtons">
+        <button (click)="fileInput.click()" class = "import"></button>
+        <input style="display: none;" multiple (change)="handleFileInput($any($event).target.files)"  type="file" #fileInput>
+    </div>
+</div>
+
+
+<div class="details-container">
+    <div class="row">
+        <app-contact-info class="contact-info" (formValidity)="setValidity($event)" (updateCandidateInfo)="updateCandidateInfo($event)" [candidateLoad]="loadCandidate()"></app-contact-info>
+        <app-technical-info class="tech-info" (updateTechincalInfo)="updateTechnicalInfo($event)" [candidateLoad]="loadCandidate()"></app-technical-info>
+    </div>
+    <app-notes class="notes" (updateNotes)="updateNotes($event)" [candidateLoad]="loadCandidate()"></app-notes>
+    <div class="container">
+        <p *ngFor="let file of filesList;let i = index">
+            <button class="file-btn" (click)="downloadFile(i)">{{editFileName(file.fileName!)}}</button>
+        </p>
+    </div>
+    <div class="buttons-row">
+        <div class="buttons">
+            <button class="cancel-button" (click)="cancel()">Cancel</button>
+            <button class="save-button" (click)="save()">Save</button>
+        </div>
+    </div>
+</div>
+
+
